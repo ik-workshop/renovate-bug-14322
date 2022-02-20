@@ -35,3 +35,6 @@ example1: ## Run example 1
 
 example2: ## Run example 2 with custom empty label
 	@$(MAKE) run name=ex2
+
+example3: ## Run example 3 enchanced version of ex2
+	@$(MAKE) run name=ex3
