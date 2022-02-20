@@ -6,6 +6,8 @@ if (!Fs.existsSync('repos.json')) {
   throw new Error('Missing enabled-repos.json - please create it by running "npm run generate-enabled".');
 }
 
+const enableManagers = ["regex"]
+
 module.exports = {
   "platform": "github",
   "token": process.env.RENOVATE_TOKEN,
@@ -25,7 +27,7 @@ module.exports = {
       "addLabels": ["{{depType}}", "{{datasource}}", "{{updateType}}"]
     }
   ],
-  "enabledManagers": [
+  "regexManagers": [
     {
       "fileMatch": ['helm-release\.yaml'],
       "matchStrings": [
@@ -40,5 +42,6 @@ module.exports = {
       ],
       "datasourceTemplate": "helm"
     },
-  ]
+  ],
+  "enabledManagers": enableManagers,
 }

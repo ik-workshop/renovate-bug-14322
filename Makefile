@@ -31,7 +31,7 @@ run: ## Run renovate locally name=ex5
 		$(CI_RENOVATE_IMAGE) renovate --dry-run=false
 
 example1: ## Run example 1
-	@$(MAKE) run name=ex2
+	@$(MAKE) run name=ex1
 
 example2: ## Run example 2 with custom empty label
 	@$(MAKE) run name=ex2
