@@ -25,4 +25,20 @@ module.exports = {
       "addLabels": ["{{depType}}", "{{datasource}}", "{{updateType}}"]
     }
   ],
+  "enabledManagers": [
+    {
+      "fileMatch": ['helm-release\.yaml'],
+      "matchStrings": [
+        "chart:\n *repository: (?<registryUrl>.*?)\n *name: (?<depName>.*?)\n *version: (?<currentValue>.*)\n"
+      ],
+      "datasourceTemplate": "helm"
+    },
+    {
+      "fileMatch": ['dev\.env'],
+      "matchStrings": [
+        "^#\\s*renovate:\\s*repository=(?<registryUrl>.*?)\\s*depName=(?<depName>.*?)\n.*?_HELM_CHART_VERSION=\"(?<currentValue>.*)\""
+      ],
+      "datasourceTemplate": "helm"
+    },
+  ]
 }
