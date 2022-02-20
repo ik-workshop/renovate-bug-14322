@@ -1,6 +1,7 @@
 # Renovate Bug Fix
 
-Labels not set when there is an empty label.
+Labels not set when there is an empty label. The renovate congiration does not validate user input, or runtime label setup.
+Github API does not let to push empty labels. Renovate can have a behaviour changed slightly.
 
 - [Issue](https://github.com/renovatebot/renovate/issues/14328)
 - [Bug fix](https://github.com/renovatebot/renovate/pull/14322)
