@@ -26,6 +26,12 @@ run: ## Run renovate locally name=ex5
 		-e RENOVATE_TOKEN \
 		-e LOG_LEVEL=$(LOG_LEVEL) \
 		-v ${PWD}/.cache:/tmp/renovate \
-		-v ${PWD}/config.js:/usr/src/app/config.js \
+		-v ${PWD}/config-$(name).js:/usr/src/app/config.js \
 		-v ${PWD}/repos.json:/usr/src/app/repos.json \
 		$(CI_RENOVATE_IMAGE) renovate --dry-run=false
+
+example1: ## Run example 1
+	@$(MAKE) run name=ex2
+
+example2: ## Run example 2 with custom empty label
+	@$(MAKE) run name=ex2
