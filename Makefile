@@ -26,10 +26,6 @@ run: ## Run renovate locally name=ex5
 		-e RENOVATE_TOKEN \
 		-e LOG_LEVEL=$(LOG_LEVEL) \
 		-v ${PWD}/.cache:/tmp/renovate \
-		-v ${PWD}/playground/$(name)/config.js:/usr/src/app/config.js \
+		-v ${PWD}/config.js:/usr/src/app/config.js \
 		-v ${PWD}/repos.json:/usr/src/app/repos.json \
-		-v ${PWD}/playground/$(name)/regexManagers.js:/usr/src/app/regexManagers.js \
-		-v ${PWD}/playground/$(name)/packageRules.js:/usr/src/app/packageRules.js \
 		$(CI_RENOVATE_IMAGE) renovate --dry-run=false
-
-# 		-e EXCERCISE_NAME=$(name) \
