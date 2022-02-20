@@ -2,6 +2,10 @@
 
 Labels not set when there is an empty label.
 
+- [Issue](https://github.com/renovatebot/renovate/issues/14328)
+- [Bug fix](https://github.com/renovatebot/renovate/pull/14322)
+- [Proposal: is.nonEmptyStringOrWhitespace](https://github.com/sindresorhus/is/issues/158)
+
 ---
 
 ![](https://img.shields.io/github/commit-activity/m/ik-workshop/renovate-bug-14322)
@@ -296,8 +300,6 @@ DEBUG: Pull request creation error (repository=ik-workshop/renovate-bug-14322, b
 
 ## Resources
 
-- [Issue](https://github.com/renovatebot/renovate/issues/14328)
-- [Bug fix](https://github.com/renovatebot/renovate/pull/14322)
 - [Renovate: documentation](https://docs.renovatebot.com/)
 - [Renovate: docs template fields](https://docs.renovatebot.com/templates/)
 
