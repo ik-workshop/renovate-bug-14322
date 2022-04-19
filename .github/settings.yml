@@ -3,8 +3,8 @@ _extends: .github
 
 repository:
   # See https://developer.github.com/v3/repos/#edit for all available settings.
-  name: workshop-blueprint
-  description: ':lady_beetle: As described in the issue [Renovate Issue:14328](https://github.com/renovatebot/renovate/issues/14328)'
+  name: renovate-bug-14322
+  description: ':lady_beetle: As described in the issue [Renovate Issue:14322](https://github.com/renovatebot/renovate/issues/14322)'
   homepage: https://ivankatliarchuk.github.io
   topics: ivka, workshop, renovate, renovate-bug, renovate-issue
   private: false
